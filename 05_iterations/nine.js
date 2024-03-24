@@ -30,3 +30,5 @@ const total = shoppingCart.reduce((acc, item) => {
 }, 0);
 
 console.log(`Total is : ${total}`);
+
+ref;
