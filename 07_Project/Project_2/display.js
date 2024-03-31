@@ -17,7 +17,7 @@ form.addEventListener("submit", function (e) {
   } else {
     const bmi = (weight / ((height * height) / 10000)).toFixed(2);
     // show the result
-    result.innerHTML = `<span> Your BMI is ${bmi}</span>`;
+    result.innerHTML = `<span>Your BMI is ${bmi}</span>`;
 
     // to display the range on the bases of BMI generated
     if (bmi < 18.6) {
@@ -25,11 +25,11 @@ form.addEventListener("submit", function (e) {
       display.innerHTML = content;
     }
     if (bmi >= 18.6 && bmi <= 24.9) {
-      const content = val.querySelector("p")[1].textContent;
+      const content = val.querySelectorAll("p")[1].textContent;
       display.innerHTML = content;
     }
     if (bmi > 24.9) {
-      const content = val.querySelector("p")[2].textContent;
+      const content = val.querySelectorAll("p")[2].textContent;
       display.innerHTML = content;
     }
   }
