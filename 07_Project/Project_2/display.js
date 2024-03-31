@@ -16,7 +16,10 @@ form.addEventListener("submit", function (e) {
     result.innerHTML = `Please provide a Valid Height ${weight}`;
   } else {
     const bmi = (weight / ((height * height) / 10000)).toFixed(2);
-    result.innerHTML = `Your BMI is ${bmi}`;
+    // show the result
+    result.innerHTML = `<span> Your BMI is ${bmi}</span>`;
+
+    // to display the range on the bases of BMI generated
     if (bmi < 18.6) {
       const content = val.querySelectorAll("p")[0].textContent;
       display.innerHTML = content;
